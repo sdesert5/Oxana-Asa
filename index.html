@@ -41,28 +41,29 @@
       100% { background-position: 20px 40px, 40px 80px, 60px 120px; }
     }
     .speaker-photo {
-      flex: 0 0 340px;
-      max-width: 400px;
+      flex: 0 0 510px;
+      max-width: 600px;
+      min-width: 330px;
+      min-height: 480px;
       z-index: 1;
       margin-right: 40px;
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-      overflow: hidden;
-      background: #222;
-      min-width: 220px;
-      min-height: 320px;
+      overflow: visible;
+      background: transparent;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0;
     }
     .speaker-photo img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 24px;
       object-fit: cover;
-      min-height: 320px;
-      min-width: 220px;
+      min-width: 330px;
+      min-height: 480px;
+      box-shadow: none;
+      border: none;
+      background: transparent;
     }
     .header-content {
       flex: 1 1 0;
@@ -136,6 +137,7 @@
       margin-right: 18px;
       transition: background 0.3s, box-shadow 0.3s, color 0.3s;
       outline: none;
+      text-decoration: none;
     }
     .cta-btn:hover, .cta-btn:focus {
       background: linear-gradient(135deg, #ffd700 0%, #f4d03f 100%);
@@ -209,7 +211,7 @@
   <header class="header">
     <div class="header-bg"></div>
     <div class="speaker-photo">
-      <img src="images/oksana.jpeg" alt="Оксана Асалханова, спикер" />
+      <img src="images/Oksana2.png" alt="Оксана Асалханова, спикер" />
     </div>
     <div class="header-content">
       <div class="pretitle">Наставник Оксана Асалханова</div>
@@ -218,7 +220,7 @@
       </div>
       <div class="subtitle">Коуч и психолог с 25 летним опытом</div>
       <div class="cta-block">
-        <button class="cta-btn">Зарегистрироваться</button>
+        <a class="cta-btn" href="https://t.me/Oxanaasa" target="_blank" rel="noopener noreferrer">Зарегистрироваться</a>
         <div class="cta-info">
           <span class="places">Осталось 20 мест</span>
           <span>5 занятий по 2 часа</span>
