@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как изменить мышление и выйти на доход 300к</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1d2e 0%, #252847 100%);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .header {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 0 20px;
+      box-sizing: border-box;
+    }
+    .header-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 0;
+      background: radial-gradient(ellipse at 70% 20%, rgba(255,255,255,0.08) 0%, rgba(26,29,46,0.9) 80%),
+                  repeating-radial-gradient(circle at 30% 80%, #ffd70022 0, #ffd70000 40px, #ffd70011 80px, #ffd70000 120px),
+                  url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="1.5" fill="white" opacity="0.3"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.2"/><circle cx="200" cy="100" r="2" fill="white" opacity="0.15"/></svg>');
+      background-size: cover;
+      pointer-events: none;
+      animation: bgmove 20s linear infinite alternate;
+    }
+    @keyframes bgmove {
+      0% { background-position: 0 0, 0 0, 0 0; }
+      100% { background-position: 20px 40px, 40px 80px, 60px 120px; }
+    }
+    .speaker-photo {
+      flex: 0 0 510px;
+      max-width: 600px;
+      min-width: 330px;
+      min-height: 480px;
+      z-index: 1;
+      margin-right: 40px;
+      overflow: visible;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .speaker-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      min-width: 330px;
+      min-height: 480px;
+      box-shadow: none;
+      border: none;
+      background: transparent;
+    }
+    .header-content {
+      flex: 1 1 0;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 600px;
+    }
+    .header-content .pretitle {
+      font-size: 1.1rem;
+      color: #f4d03f;
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .header-content .subtitle {
+      font-size: 1.2rem;
+      color: #cccccc;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+    .header-content .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .header-content .title .accent {
+      color: #ffd700;
+      font-size: 3.5rem;
+      font-weight: bold;
+      letter-spacing: -0.03em;
+      text-shadow: 0 2px 16px #f4d03f44;
+      transition: text-shadow 0.3s;
+    }
+    .header-content .title .accent:hover {
+      text-shadow: 0 4px 32px #ffd700cc, 0 0 8px #fff;
+    }
+    .cta-block {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 215, 0, 0.08);
+      border: 2px solid #ffd700;
+      border-radius: 16px;
+      padding: 18px 28px;
+      margin-top: 32px;
+      gap: 24px;
+      box-shadow: 0 4px 24px rgba(244, 208, 63, 0.10);
+      transition: box-shadow 0.3s;
+    }
+    .cta-block:hover {
+      box-shadow: 0 8px 32px #ffd70044;
+    }
+    .cta-btn {
+      background: linear-gradient(135deg, #f4d03f 0%, #ffd700 100%);
+      color: #1a1d2e;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(244, 208, 63, 0.3);
+      margin-right: 18px;
+      transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+      outline: none;
+      text-decoration: none;
+    }
+    .cta-btn:hover, .cta-btn:focus {
+      background: linear-gradient(135deg, #ffd700 0%, #f4d03f 100%);
+      color: #252847;
+      box-shadow: 0 8px 32px #ffd70088;
+    }
+    .cta-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 1rem;
+      color: #fff;
+      font-weight: 500;
+    }
+    .cta-info .places {
+      color: #ffd700;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    @media (max-width: 900px) {
+      .header {
+        flex-direction: column;
+        align-items: stretch;
+        min-height: unset;
+        padding: 24px 8px 0 8px;
+      }
+      .speaker-photo {
+        margin: 0 auto 32px auto;
+        max-width: 320px;
+      }
+      .header-content {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+      .cta-block {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+      }
+      .cta-btn {
+        margin: 0 0 8px 0;
+        width: 100%;
+      }
+      .cta-info {
+        align-items: center;
+      }
+    }
+    @media (max-width: 600px) {
+      .header {
+        padding: 12px 0 0 0;
+      }
+      .speaker-photo {
+        min-width: 140px;
+        min-height: 180px;
+        max-width: 180px;
+      }
+      .header-content .title {
+        font-size: 1.3rem;
+      }
+      .header-content .title .accent {
+        font-size: 2rem;
+      }
+      .cta-block {
+        padding: 12px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-bg"></div>
+    <div class="speaker-photo">
+      <img src="images/Oksana2.png" alt="Оксана Асалханова, спикер" />
+    </div>
+    <div class="header-content">
+      <div class="pretitle">Наставник Оксана Асалханова</div>
+      <div class="title">
+        КАК ИЗМЕНИТЬ МЫШЛЕНИЕ И ВЫЙТИ НА ДОХОД <span class="accent">300к</span>
+      </div>
+      <div class="subtitle">Коуч и психолог с 25 летним опытом</div>
+      <div class="cta-block">
+        <a class="cta-btn" href="https://t.me/Oxanaasa" target="_blank" rel="noopener noreferrer">Зарегистрироваться</a>
+        <div class="cta-info">
+          <span class="places">Осталось 20 мест</span>
+          <span>5 занятий по 2 часа</span>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+</html> 
